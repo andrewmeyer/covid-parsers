@@ -5,3 +5,5 @@ requires 'Mojo::Graphite::Writer';
 requires 'Mojo::UserAgent';
 requires 'Getopt::Long';
 requires 'Future::AsyncAwait';
+requires 'DateTime';
+requires 'Term::ProgressBar';
