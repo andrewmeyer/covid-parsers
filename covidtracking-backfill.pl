@@ -68,7 +68,8 @@ foreach my $entryRef (@$apiResult) {
   my $date= $entryRef->{date};
   my $state = $entryRef->{state};
   $date =~ /(\d{4})(\d{2})(\d{2})/ or die;
-  my $dt = DateTime->new( year => $1, month => $2, day => $3);
+  my $dt = DateTime->new( year => $1, month => $2, day => $3, time_zone => 'Etc/GMT');
+  $dt = $dt->subtract(days => -1); # the API returns yesterday's values as today
   $date = $dt->epoch;
   my $offset = 0;
   my @metrics;
