@@ -39,7 +39,7 @@ $opt{output}    //= "pretty";
 $opt{interval}  ||= $ENV{COLLECTD_INTERVAL} || 10;
 $opt{graphite}  //= "10.2.1.12";
 
-my $apiTarget = "http://$opt{host}/api/$opt{scope}";
+my $apiTarget = "https://$opt{host}/api/v1/$opt{scope}.json";
 if ($opt{filter}) {
   $apiTarget = $apiTarget."?".$opt{filter};
 }

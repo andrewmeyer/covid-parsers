@@ -7,3 +7,4 @@ requires 'Getopt::Long';
 requires 'Future::AsyncAwait';
 requires 'DateTime';
 requires 'Term::ProgressBar';
+requires 'IO::Socket::SSL';
